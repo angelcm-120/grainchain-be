@@ -1,0 +1,14 @@
+Send Request
+### ================== Controllers default ==================
+### Status Route
+GET http://localhost:3000/v1/status/
+
+### ================== Controllers Test Bombillos ==================
+
+### 1.- Get Matriz
+POST http://localhost:3000/v1/bombillo/get-matriz
+Content-Type: application/json
+
+### 2.- Get Iluminacion
+POST http://localhost:3000/v1/bombillo/get-iluminacion
+Content-Type: application/json
