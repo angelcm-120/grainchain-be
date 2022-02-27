@@ -12,8 +12,11 @@ const getIluminacion = async (response) => {
     try {
         let matriz = fs.readFileSync('matriz.txt', 'utf-8')
         if( matriz !== undefined && matriz !== null && matriz?.length > 0) {
-            matriz = matriz.split('\r\n')
-            
+            matriz = matriz.split('\n')
+            let matrizAux = matriz.toString().replace(/,/g,'').split('\r')
+            if(matrizAux.length > 1) {
+                matriz = matrizAux
+            }
             response.resultado = await getBombilloOptimo(matriz)
             response.info = undefined
             response.codigo = undefined
