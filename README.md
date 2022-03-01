@@ -1,4 +1,4 @@
-# bazmeet-be
+# grainchain-be
 
 -- Instala dependencias
 
